@@ -1,31 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav class="nav-extended">
+      <div class="nav-wrapper">
+        <router-link to="/" class="brand-logo">D :) Juice</router-link>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/juice">Juice</router-link>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-content">
+        <router-link
+          to="/juice"
+          class="btn-floating btn-large halfway-fab waves-effect waves-light teal"
+        >
+          <i class="material-icons">add</i>
+        </router-link>
+      </div>
+    </nav>
     <router-view/>
   </div>
 </template>
 
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+nav ul {
+  margin-right: 100px;
 }
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.brand-logo {
+  margin-left: 70px;
 }
 </style>
